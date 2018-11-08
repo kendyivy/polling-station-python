@@ -1,0 +1,41 @@
+{% extends 'layout.html'%}
+
+{% block content%}
+<body>
+  <div class="container">
+    <table class="table">
+      <thead>
+    <tr>
+        
+        
+        <th>date</th>
+        <th>understand_index</th>
+        <th>reccomendations</th>
+      
+       
+
+        
+      </tr>
+    </thead>
+    <tbody>
+     {% for polling in pollings %} 
+      <tr>
+        
+           
+           
+            <td>{{polling.time_made}}</td>
+            <td>{{polling.understand_index}}</td>
+            <td>{{polling.reccomendations}}</td>
+           
+      </tr>
+      {% endfor %}
+
+    </tbody>
+
+    </table>
+    
+    
+    
+  </div>
+</body>
+{% endblock %}
